@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommentService {
-  private JsonExample = 'https://jsonplaceholder.typicode.com/users/';
+  private JsonExample = 'https://jsonplaceholder.typicode.com/comments';
   constructor(private http: HttpClient) { }
 
   async Get() {
@@ -14,7 +14,7 @@ export class CommentService {
     return resposta;
   };
   async GetByID(id) {
-    let resposta = await this.http.get(this.JsonExample + id).toPromise();
+    let resposta = await this.http.get(this.JsonExample + "?postId=" + id).toPromise();
     console.log(resposta);
     return resposta;
   };

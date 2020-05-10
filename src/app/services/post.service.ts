@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PostService {
-  private JsonExample = 'https://jsonplaceholder.typicode.com/users/';
+  private JsonExample = 'https://jsonplaceholder.typicode.com/posts/';
   constructor(private http: HttpClient) { }
 
   async Get() {

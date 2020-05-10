@@ -1,1 +1,13 @@
-<p>comment works!</p>
+<div class="container" *ngFor="let post of comments">
+
+
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Post</div>
+        <div class="card-body">
+            <h5 class="card-title">Comentario</h5>
+            <p class="card-text">{{post.name}}</p>
+            <p class="card-text">{{post.email}}</p>
+            <p class="card-text">{{post.body}}</p>
+        </div>
+    </div>
+</div>
