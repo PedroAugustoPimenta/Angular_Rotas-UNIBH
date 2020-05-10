@@ -10,12 +10,17 @@ export class CommentComponent implements OnInit {
   comment: comment;
   comments: comment[];
   receber: any;
+  receberComentarios: any;
   @Input() postInput;
   constructor(private service: CommentService) { }
 
   async ngOnInit() {
     this.receber = await this.service.GetByID(this.postInput);
     this.comments = this.receber;
+
+    this.receberComentarios = await this.service.Get();
+    this.comments = this.comments;
+
   }
 
 }
